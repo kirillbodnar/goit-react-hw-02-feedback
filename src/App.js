@@ -11,31 +11,15 @@ export default class App extends Component {
     bad: 0,
   };
 
-  handleGoodReview = () => {
-    this.setState(prevState => ({
-      good: prevState.good + 1,
-    }));
-  };
-
-  handleNeutralReview = () => {
-    this.setState(prevState => ({
-      neutral: prevState.neutral + 1,
-    }));
-  };
-
-  handleBadReview = () => {
-    this.setState(prevState => ({
-      bad: prevState.bad + 1,
-    }));
-  };
-
   countTotalFeedback = () => {
     return this.state.good + this.state.neutral + this.state.bad;
   };
 
   countPositiveFeedbackPercentage = () => {
     return Math.round(
-      (this.state.good / (this.state.good + this.state.bad)) * 100
+      (this.state.good /
+        (this.state.good + this.state.bad + this.state.neutral)) *
+        100
     );
   };
 

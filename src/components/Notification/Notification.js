@@ -1,10 +1,10 @@
 import s from 'components/Notification/Notification.module.css';
 import PropTypes from 'prop-types';
 
-export default function Component({ message }) {
+export default function Notification({ message }) {
   return <p className={s.notification}>{message}</p>;
 }
 
-Component.propTypes = {
+Notification.propTypes = {
   message: PropTypes.string.isRequired,
 };
