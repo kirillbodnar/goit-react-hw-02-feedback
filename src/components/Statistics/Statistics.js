@@ -8,7 +8,7 @@ export default function Statistics({ good, neutral, bad, total, percentage }) {
       <p className={s.item}>Neutral: {neutral}</p>
       <p className={s.item}>Bad: {bad}</p>
       <p className={s.item}>Total: {total}</p>
-      <p className={s.item}>Positive feedback: {percentage}%</p>
+      <p className={s.item}>Positive feedback: {percentage} %</p>
     </>
   );
 }
